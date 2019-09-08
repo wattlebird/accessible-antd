@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Menu from 'antd/es/menu';
+import AccessibleMenu from './components/accessiblemenu'
 import "./App.css"
 
 const {SubMenu} = Menu
@@ -7,7 +8,7 @@ const {SubMenu} = Menu
 class App extends Component {
   render() {
     return (
-      <Menu mode="horizontal">
+      <AccessibleMenu mode="horizontal">
         <SubMenu title="About">
           <Menu.Item>Overview</Menu.Item>
           <Menu.Item>Administration</Menu.Item>
@@ -46,7 +47,7 @@ class App extends Component {
           <Menu.Item>Academic Calendar</Menu.Item>
           <Menu.Item>Transcripts</Menu.Item>
         </SubMenu>
-      </Menu>
+      </AccessibleMenu>
     );
   }
 }

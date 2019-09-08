@@ -3,3 +3,7 @@
 .App {
   text-align: center;
 }
+
+.ant-menu-submenu[role='menuitem']:focus {
+  outline: 1px dotted;
+}
