@@ -18,7 +18,6 @@ module.exports = function(api) {
   const plugins = [
     '@babel/transform-react-constant-elements',
     '@babel/plugin-transform-runtime',
-    'react-hot-loader/babel',
 
     // Stage 2 https://github.com/babel/babel/tree/master/packages/babel-preset-stage-2
     ['@babel/plugin-proposal-decorators', { legacy: true }],
@@ -34,11 +33,14 @@ module.exports = function(api) {
     '@babel/plugin-proposal-json-strings',
 
     // antd load on requirement
-    ["import", {
-      "libraryName": "antd",
-      "libraryDirectory": "es",
-      "style": "css" // `style: true` 会加载 less 文件
-    }]
+    [
+      'import',
+      {
+        libraryName: 'antd',
+        libraryDirectory: 'es',
+        style: 'css', // `style: true` 会加载 less 文件
+      },
+    ],
   ];
 
   if (babelEnv === 'production') {

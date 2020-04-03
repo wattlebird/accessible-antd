@@ -4,6 +4,7 @@ const commonPaths = require('./paths');
 
 module.exports = {
   mode: 'development',
+  devtool: 'source-map',
   output: {
     filename: '[name].js',
     path: commonPaths.outputPath,
@@ -18,7 +19,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
             },
           },
           'sass-loader',
@@ -28,8 +29,6 @@ module.exports = {
   },
   devServer: {
     contentBase: commonPaths.outputPath,
-    compress: true,
-    hot: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };
