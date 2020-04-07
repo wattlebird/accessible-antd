@@ -13,6 +13,7 @@ module.exports = function(api) {
         useBuiltIns: 'usage',
       },
     ],
+    '@babel/preset-typescript',
     '@babel/preset-react',
   ];
   const plugins = [
